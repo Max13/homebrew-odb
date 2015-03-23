@@ -37,6 +37,10 @@ GCC's option is there for clang haters ;)
 
 If you use `Qt`'s framework, you must choose `--with-libstdc++`
 
+# Known issues
+-  [#1](https://github.com/Max13/homebrew-odb/issues/1): Specify `libodb` when installing a package depending on it.
+-  [#2](https://github.com/Max13/homebrew-odb/issues/2): Install `libodb-*` packages **AFTER** the `odb` compiler.
+
 # Issues
 - If you have an issue during the installation, don't hesitate to check if it's not a known issue, and to submit one if not: [Issues](https://github.com/Max13/homebrew-odb/issues)
 
