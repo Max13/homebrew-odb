@@ -25,6 +25,16 @@ class Libodb < Formula
     STDLIB = MacOS.version < :mavericks ? "libstdc++" : "libc++"
   end
 
+  patch do
+    url "http://scm.codesynthesis.com/?p=odb/libodb.git;a=patch;h=b119086e8c5835695cd851da8ad1393218aa29df"
+    sha256 "10fdc6170e047f4a8dcdca769a923a5badc8bde8b52859e8494f74d968252fde"
+  end
+
+  patch do
+    url "http://scm.codesynthesis.com/?p=odb/libodb.git;a=patch;h=ee4d942916d347ac65f53969941b0fb100760611"
+    sha256 "b63637157fc71e2d16d208b183aa25691d79d718043637d5534202927de544f6"
+  end
+
   def install
     args = %W[
       --disable-dependency-tracking
