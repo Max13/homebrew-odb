@@ -29,7 +29,7 @@ class LibodbSqlite < Formula
 
   patch do
     url "http://scm.codesynthesis.com/?p=odb/libodb-sqlite.git;a=patch;h=27a578709046a81bb0efc0027bfc74318615447e"
-    sha256 "53074fdd6b1306e9e6cf7b49124323df8056c6290a7e5fbae09e4bd3fedf281e"
+    sha256 "daa40de58d78efc1d9b65e2cc767c4e72a26ceb8a8b8fde5e2d8e2d310a9a535"
   end
 
   def install
