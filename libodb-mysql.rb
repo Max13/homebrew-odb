@@ -5,6 +5,13 @@ class LibodbMysql < LibodbBase
 
   depends_on "mysql-connector-c"
 
+  option "with-libstdc++",
+           "Force compiling with libstdc++ (Default BEFORE 10.9)"
+  option "with-libc++",
+         "Force compiling with libc++ (Default SINCE 10.9)"
+  option "with-gcc",
+         "Force compiling with gcc and GCC's libstdc++"
+
   def install
     standard_install
   end
