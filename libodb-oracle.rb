@@ -3,6 +3,13 @@ class LibodbOracle < LibodbBase
   url "http://www.codesynthesis.com/download/odb/2.4/libodb-oracle-2.4.0.tar.gz"
   sha256 "57b4d5da5efc262e7fdecd764565fb8e25168838b09604f6815cd3c1c237aa06"
 
+  option "with-libstdc++",
+           "Force compiling with libstdc++ (Default BEFORE 10.9)"
+  option "with-libc++",
+         "Force compiling with libc++ (Default SINCE 10.9)"
+  option "with-gcc",
+         "Force compiling with gcc and GCC's libstdc++"
+
   def install
     standard_install
   end

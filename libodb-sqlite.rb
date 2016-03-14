@@ -8,6 +8,13 @@ class LibodbSqlite < LibodbBase
     sha256 "daa40de58d78efc1d9b65e2cc767c4e72a26ceb8a8b8fde5e2d8e2d310a9a535"
   end
 
+  option "with-libstdc++",
+           "Force compiling with libstdc++ (Default BEFORE 10.9)"
+  option "with-libc++",
+         "Force compiling with libc++ (Default SINCE 10.9)"
+  option "with-gcc",
+         "Force compiling with gcc and GCC's libstdc++"
+
   def install
     standard_install
   end
