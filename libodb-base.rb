@@ -27,14 +27,14 @@ class LibodbBase < Formula
 
   depends_on "libodb" => "with-" + STDLIB
 
-  def standard_install
+  def standard_install(stdlib)
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
     ]
 
-    if STDLIB != "gcc"
-      args << "CXX=#{ENV.cxx}\ -stdlib=#{STDLIB}"
+    if stdlib != "gcc"
+      args << "CXX=#{ENV.cxx}\ -stdlib=#{stdlib}"
     end
 
     system "./configure", *args
@@ -42,7 +42,7 @@ class LibodbBase < Formula
 
     opoo <<-EOS.undent
       Your app, libodb and its libs must be compiled with the same
-      C++ standard library. Currently: #{STDLIB}
+      C++ standard library. Currently: #{stdlib}
     EOS
   end
 
