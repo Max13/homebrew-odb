@@ -11,7 +11,7 @@ class Libcutl < Formula
          "Force compiling with libc++ (Default SINCE 10.9)"
 
   if build.with?("gcc")
-    depends_on "gcc"
+    depends_on "gcc5"
 
     fails_with :clang
     fails_with :llvm

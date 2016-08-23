@@ -11,7 +11,7 @@ class LibodbBase < Formula
          "Force compiling with gcc and GCC's libstdc++"
 
   if build.with?("gcc")
-    depends_on "gcc"
+    depends_on "gcc5"
 
     fails_with :clang
     fails_with :llvm
