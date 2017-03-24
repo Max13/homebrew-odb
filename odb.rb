@@ -3,7 +3,11 @@ class Odb < Formula
   url "http://www.codesynthesis.com/download/odb/2.4/odb-2.4.0.tar.gz"
   sha256 "169103a7829b9d8b2fdf5c267d18acc3d47c964d355c7af335d75c63b29c52b5"
 
-  depends_on "gcc5"
+  if MacOS.version <= :el_capitan
+    depends_on "gcc@5"
+  else
+    depends_on "gcc@4.9"
+  end
   depends_on "libcutl" => "with-gcc"
   depends_on "libodb"
 
