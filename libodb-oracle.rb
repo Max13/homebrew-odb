@@ -12,7 +12,11 @@ class LibodbOracle < LibodbBase
          "Force compiling with gcc and GCC's libstdc++"
 
   if build.with?("gcc")
-    depends_on "gcc5"
+    if MacOS.version <= :el_capitan
+      depends_on "gcc@5"
+    else
+      depends_on "gcc@4.9"
+    end
 
     fails_with :clang
     fails_with :llvm
