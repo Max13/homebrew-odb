@@ -15,10 +15,6 @@ class Odb < Formula
     cause "ODB is a GCC plugin"
   end
 
-  fails_with :llvm do
-    cause "ODB is a GCC plugin"
-  end
-
   def install
     File.open("doc/default.options", "w") do |f|
       f << "# Default ODB options file. This file is automatically loaded by the ODB\n"
