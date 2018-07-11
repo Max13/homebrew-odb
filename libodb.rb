@@ -29,13 +29,13 @@ class Libodb < Formula
   end
 
   patch do
-    url "http://scm.codesynthesis.com/?p=odb/libodb.git;a=patch;h=b119086e8c5835695cd851da8ad1393218aa29df"
-    sha256 "860bdab948a72b30397377201be329c9124594026ff088effe85cc87c39de079"
+    url "https://git.codesynthesis.com/cgit/odb/libodb/patch/?id=b119086e8c5835695cd851da8ad1393218aa29df"
+    sha256 "5dc8613e7847b15be6c3ce51723e680f68927fcc5acafe024a3e0ba6a7037787"
   end
 
   patch do
-    url "http://scm.codesynthesis.com/?p=odb/libodb.git;a=patch;h=ee4d942916d347ac65f53969941b0fb100760611"
-    sha256 "d58490df7cc415bd55373aaebc185b5e4e60275a4536a737fcd22196393dd831"
+    url "https://git.codesynthesis.com/cgit/odb/libodb/patch/?id=ee4d942916d347ac65f53969941b0fb100760611"
+    sha256 "7b90e618b1deece04faa2e8203b30e15be0a888ac8dbbf7abc3eb9ed701a12b3"
   end
 
   def install

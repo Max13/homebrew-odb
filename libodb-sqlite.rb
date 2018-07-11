@@ -32,8 +32,8 @@ class LibodbSqlite < LibodbBase
   depends_on "libodb" => "with-" + STDLIB
 
   patch do
-    url "http://scm.codesynthesis.com/?p=odb/libodb-sqlite.git;a=patch;h=27a578709046a81bb0efc0027bfc74318615447e"
-    sha256 "daa40de58d78efc1d9b65e2cc767c4e72a26ceb8a8b8fde5e2d8e2d310a9a535"
+    url "https://git.codesynthesis.com/cgit/odb/libodb-sqlite/patch/?id=27a578709046a81bb0efc0027bfc74318615447e"
+    sha256 "1cda75667b07b691348c1c9f5012f908e080574d5904807ce685fcf822a60065"
   end
 
   def install
