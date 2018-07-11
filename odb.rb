@@ -37,7 +37,7 @@ class Odb < Formula
   end
 
   test do
-    (testpath/"test.hxx").write <<-EOS.undent
+    (testpath/"test.hxx").write <<-EOS
       #include <odb/core.hxx>
       #pragma db object
       class person

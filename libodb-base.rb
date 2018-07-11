@@ -43,14 +43,14 @@ class LibodbBase < Formula
     system "./configure", *args
     system "make", "install"
 
-    opoo <<-EOS.undent
+    opoo <<-EOS
       Your app, libodb and its libs must be compiled with the same
       C++ standard library. Currently: #{stdlib}
     EOS
   end
 
   def install
-    onoe <<-EOS.undent
+    onoe <<-EOS
       Do not install this formula. Instead, install the formula for the database
       you wish to use.
     EOS

@@ -42,7 +42,7 @@ class LibodbQt < Formula
 
   def install
     unless QMAKE
-      onoe <<-EOS.undent
+      onoe <<-EOS
         Qt is a dependency, but you chose \"--without-qt\".
         You need to indicate \`qmake\` path to homebrew as:
           QMAKE=~/Qt/5.4/clang_64/bin/qmake brew install libodb-qt
@@ -82,14 +82,14 @@ class LibodbQt < Formula
       f << "-x -I#{qtlib}/QtWidgets.framework/Headers\n"
     end
 
-    opoo <<-EOS.undent
+    opoo <<-EOS
       Your app, libodb and its libs must be compiled with the same
       C++ standard library. Currently: #{STDLIB}
     EOS
   end
 
   test do
-    (testpath/"test.cpp").write <<-EOS.undent
+    (testpath/"test.cpp").write <<-EOS
       #include <odb/qt/exception.hxx>
       struct qt_exception : odb::qt::exception
       {

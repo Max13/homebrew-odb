@@ -51,14 +51,14 @@ class Libodb < Formula
     system "./configure", *args
     system "make", "install"
 
-    opoo <<-EOS.undent
+    opoo <<-EOS
       Your app, libodb and its libs must be compiled with the same
       C++ standard library. Currently: #{STDLIB}
     EOS
   end
 
   test do
-    (testpath/"test.cpp").write <<-EOS.undent
+    (testpath/"test.cpp").write <<-EOS
       #include <odb/exceptions.hxx>
       int main()
       {
