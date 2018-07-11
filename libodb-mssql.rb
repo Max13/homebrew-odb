@@ -19,7 +19,6 @@ class LibodbMssql < LibodbBase
     end
 
     fails_with :clang
-    fails_with :llvm
 
     STDLIB = "gcc"
   elsif build.with?("libstdc++")
